@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="text-center bg-light text-dark d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+      <div class="border border-light w-75 h-75 shadow mx-auto">
+        <h1 class="pt-5">BMI Calculator</h1>
+        <form method="POST" action="/">
+          <div class="mb-3">
+            <label for="exampleInputWeight" class="form-label">Weight(kg)</label>
+            <input type="text" class="form-control w-50 p-3 mx-auto" id="exampleInputWeight" name="weight">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputHeight" class="form-label">Height(m)</label>
+            <input type="text" class="form-control w-50 p-3 mx-auto" id="exampleInputHeight" name="height">
+          </div>
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+        <div class="text-dark py-5">
+          {% if bmi %}
+            <h4>{{ bmi }}</h4>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
